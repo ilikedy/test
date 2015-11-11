@@ -13,7 +13,6 @@ public abstract class TestImpl implements ITest {
 		return null;
 	}
 
-	@Override
 	public void func2() {
 		// TODO Auto-generated method stub
 		
