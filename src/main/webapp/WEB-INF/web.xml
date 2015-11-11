@@ -1,0 +1,66 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>HelloWorldServlet</servlet-name>
+  	<servlet-class>servlets.HelloWorldServlet</servlet-class>
+  </servlet>
+  
+   <servlet>  
+        <servlet-name>velocity</servlet-name>  
+        <servlet-class>org.apache.velocity.tools.view.servlet.VelocityViewServlet</servlet-class>  
+    </servlet>
+   
+   <servlet>
+   	<servlet-name>responseTest</servlet-name>
+   	<servlet-class>servlets.SeeResponseInterfaces</servlet-class>
+   </servlet>
+   
+   <servlet>
+   	<servlet-name>jspServlet</servlet-name>
+   	<jsp-file>/EncodingTest.jsp</jsp-file>
+   </servlet>
+  
+   <servlet>
+   	<servlet-name>encodingServlet</servlet-name>
+   	<servlet-class>servlets.EncodingServlet</servlet-class>
+   </servlet>
+  
+    
+  <servlet-mapping>
+  	<servlet-name>HelloWorldServlet</servlet-name>
+  	<url-pattern>/HelloWorldServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>responseTest</servlet-name>
+  	<url-pattern>/response</url-pattern>
+  </servlet-mapping>
+    
+    <servlet-mapping>  
+        <servlet-name>velocity</servlet-name>  
+        <url-pattern>*.vm</url-pattern>  
+    </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>jspServlet</servlet-name>
+  	<url-pattern>*.jsp</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>encodingServlet</servlet-name>
+  	<url-pattern>/encoding</url-pattern>
+  </servlet-mapping>
+ 
+  
+  <session-config>
+  	<session-timeout>30000</session-timeout>
+  </session-config>
+  
+<welcome-file-list>
+	<welcome-file>index.jsp</welcome-file>
+</welcome-file-list>
+</web-app>
