@@ -23,7 +23,6 @@ public class HelloWorldServlet extends HttpServlet {
      */
     public HelloWorldServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
@@ -32,7 +31,6 @@ public class HelloWorldServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter pw = response.getWriter();
 		
-		// TODO Auto-generated method stub
 		@SuppressWarnings("unchecked")
 		Enumeration<String >  emAttr =  request.getAttributeNames();
 		
@@ -126,7 +124,6 @@ public class HelloWorldServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 
